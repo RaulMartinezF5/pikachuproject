@@ -3,7 +3,9 @@
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+    <h1>type</h1>
 </template>
+
+<style scoped>
+    
+</style>
