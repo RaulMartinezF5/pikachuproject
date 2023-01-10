@@ -8,7 +8,7 @@
         type="text"
         name="pokemon"
         v-model="pokemonName"
-        placeholder="Busca tu pokemon"
+        placeholder="Pokemon Search"
         autocomplete="off"/>
       <input
         type="submit"
