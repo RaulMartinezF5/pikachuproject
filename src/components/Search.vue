@@ -3,7 +3,10 @@
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+    <h1>Search</h1>
+ 
 </template>
+
+<style scoped>
+
+</style>
