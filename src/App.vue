@@ -1,7 +1,7 @@
 <script setup>
   import { usePokemonsList } from "./stores/pokemonsList";
   import { onBeforeMount, ref } from "vue";
-  import HeaderVue  from "./components/Header.vue";
+  import HeaderVue  from "@/components/Header.vue";
   import NavVue  from "./components/Nav.vue";
   import SearchVue  from "./components/Search.vue";
   import PokemonVue  from "./components/Pokemon.vue";
@@ -27,7 +27,6 @@
     <HeaderVue></HeaderVue>
   <NavVue></NavVue>
   <SearchVue></SearchVue>
-  <PokemonVue></PokemonVue>
     <h2>POKEDEX</h2>
     <section v-for="pokemon in pokemonsStore.pokemonsList">
       <ul>
