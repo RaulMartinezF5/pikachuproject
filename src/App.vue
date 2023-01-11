@@ -1,9 +1,10 @@
 <script setup>
-  
-  import PokemonVue  from "./components/Pokemon.vue";
-  import HeaderVue  from "@/components/Header.vue";
   import { usePokemonsList } from "./stores/pokemonsList";
   import { onBeforeMount, ref } from "vue";
+  import HeaderVue  from "./components/Header.vue";
+  import NavVue  from "./components/Nav.vue";
+  import SearchVue  from "./components/Search.vue";
+  import PokemonVue  from "./components/Pokemon.vue";
 
 
   const pokemonsStore = usePokemonsList()
@@ -23,7 +24,10 @@
 
 <template>
   <main>
-    <HeaderVue />
+    <HeaderVue></HeaderVue>
+  <NavVue></NavVue>
+  <SearchVue></SearchVue>
+  <PokemonVue></PokemonVue>
     <h2>POKEDEX</h2>
     <section v-for="pokemon in pokemonsStore.pokemonsList">
       <ul>
@@ -33,19 +37,6 @@
     </section>
   </main>
 </template>
-  import HeaderVue  from "./components/Header.vue";
-  import NavVue  from "./components/Nav.vue";
-  import SearchVue  from "./components/Search.vue";
-  import PokemonVue  from "./components/Pokemon.vue";
-</script>
-
-<template>
-  <HeaderVue></HeaderVue>
-  <NavVue></NavVue>
-  <SearchVue></SearchVue>
-  <PokemonVue></PokemonVue>
-</template>
-
 <style scoped>
 
 </style>

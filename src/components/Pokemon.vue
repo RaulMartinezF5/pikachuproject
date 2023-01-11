@@ -6,22 +6,6 @@
 </template>
 
 <script setup>
- 
-  import { usePokemonsList } from "@/stores/pokemonsList";
-  import { onBeforeMount, ref } from "vue";
-
-  const pokemonsStore = usePokemonsList()
-  
-  onBeforeMount(() => {
-    getPokemons()
-  })
-
-  const loading = ref(true)
-
-  const getPokemons = async () => {
-    await pokemonsStore.fetchPokemons()
-    loading.value = false
-  }
 
 const props = defineProps({
   pokemon: {
