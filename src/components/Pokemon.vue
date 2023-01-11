@@ -30,10 +30,3 @@ const props = defineProps({
   }
 })
 </script> 
-
-<style scoped>
-    
-    img{
-        width: 200px;
-    }
-</style>
