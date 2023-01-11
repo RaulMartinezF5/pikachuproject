@@ -11,6 +11,8 @@
         <li><ButtonVue></ButtonVue></li>
         <li><ButtonVue></ButtonVue></li>
     </ul>
+   
+    
 </template>
 
 <style scoped>
@@ -18,4 +20,6 @@
         display: flex;
         justify-content: space-around;
     }
+    
+
 </style>
