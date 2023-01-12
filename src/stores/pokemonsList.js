@@ -1,14 +1,17 @@
 import { defineStore } from 'pinia'
 
-var pokemon = new Object();
+let pokemon = new Object();
     pokemon.name = "",
     pokemon.type = "",
-    pokemon.id = "" ;
+    pokemon.id = "",
+    pokemon.img="" ;
+    
 
 export const usePokemonsList = defineStore({
     id: 'pokemons',
     state: () => ({
         pokemonsList: []
+
     }),
     actions: {
         async fetchPokemons () {
