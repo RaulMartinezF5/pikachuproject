@@ -1,18 +1,34 @@
 <script setup>
     import ButtonVue  from "./Button.vue";
+    
+console.log("Button");
 </script>
 
 <template>
-    <h1>Nav</h1>
     <ul>
-        <li> <button class="button button1">Green</button></li>
-        <li> <button class="button button2">Blue</button></li>
-        <li><button class="button button3">Red</button></li>
-        <li><button class="button button4">Gray</button></li>
-        <li><button class="button button4">Gray</button></li>
-        <li><button class="button button5">Black</button></li>
+        
+        <li> <button ><img src="../assets/img/imgLogosPokemon/bug.png"  alt="buttonpng" border="0" value="bug"/></button></li>
+        <li><button ><img src="../assets/img/imgLogosPokemon/ice.png" alt="buttonpng" border="0" value="ice"/> </button></li>
+        <li><button ><img src="../assets/img/imgLogosPokemon//dark.png" alt="buttonpng" border="0" value="dark"/></button></li>
+        <li><button ><img src="../assets/img/imgLogosPokemon/fire.png" alt="buttonpng" border="0" value="fire" /></button></li>
+        <li> <button ><img src="../assets/img/imgLogosPokemon/rock.png" alt="buttonpng" border="0" value="rock"/></button></li>
+        <li><button ><img src="../assets/img/imgLogosPokemon/fairy.png" alt="buttonpng" border="0" value="fairy"/></button></li>
+        <li><button ><img src="../assets/img/imgLogosPokemon/ghost.png" alt="buttonpng" border="0" value="ghost"/></button></li>
+        <li><button ><img src="../assets/img/imgLogosPokemon/grass.png" alt="buttonpng" border="0" value="grass"/></button></li>
+        <li> <button ><img src="../assets/img/imgLogosPokemon/steel.png" alt="buttonpng" border="0" value="steel"/></button></li>
+        <li> <button ><img src="../assets/img/imgLogosPokemon/water.png" alt="buttonpng" border="0" value="water"/></button></li>
+        <li><button ><img src="../assets/img/imgLogosPokemon/dragon.png" alt="buttonpng" border="0" value="dragon"/></button></li>
+        <li><button ><img src="../assets/img/imgLogosPokemon/flying.png" alt="buttonpng" border="0" value="flying"/></button></li>
+        <li><button ><img src="../assets/img/imgLogosPokemon/ground.png" alt="buttonpng" border="0" value="ground"/></button></li>
+        <li> <button ><img src="../assets/img/imgLogosPokemon/normal.png" alt="buttonpng" border="0" value="normal"/></button></li>
+        <li> <button ><img src="../assets/img/imgLogosPokemon/fighting.png" alt="buttonpng" border="0" value="fighting"/></button></li>
+        <li><button ><img src="../assets/img/imgLogosPokemon/psychic.png" alt="buttonpng" border="0" value="psychic"/></button></li>
+        <li><button ><img src="../assets/img/imgLogosPokemon/electric.png" alt="buttonpng" border="0" value="electric"/></button></li>
+        <li><button ><img src="../assets/img/imgLogosPokemon/poison.png" alt="buttonpng" border="0" value="poison"/></button></li>
+       
+
+       
     </ul>
-  
 </template>
 
 <style scoped>
@@ -30,71 +46,37 @@ li {
   float: left;
 }
 
-    /* styles for button  */
-    .button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
+    
+  button {
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+    transition: transform 0.7s ease-in-out;
 }
-
-.button1 {
-  background-color: white; 
-  color: black; 
-  border: 2px solid #4CAF50;
-}
-
-.button1:hover {
-  background-color: #4CAF50;
-  color: white;
-}
-
-.button2 {
-  background-color: white; 
-  color: black; 
-  border: 2px solid #008CBA;
-}
-
-.button2:hover {
-  background-color: #008CBA;
-  color: white;
-}
-
-.button3 {
-  background-color: white; 
-  color: black; 
-  border: 2px solid #f44336;
-}
-
-.button3:hover {
-  background-color: #f44336;
-  color: white;
-}
-
-.button4 {
-  background-color: white;
-  color: black;
-  border: 2px solid #e7e7e7;
-}
-
-.button4:hover {background-color: #e7e7e7;}
-
-.button5 {
-  background-color: white;
-  color: black;
-  border: 2px solid #555555;
-}
-
-.button5:hover {
-  background-color: #555555;
-  color: white;
-}
+  
+  button:hover {
+    transform: rotate(360deg);
+  }
+  
+  img {
+    width: 70px;
+    height: 70px;
+  }
+  
+  input[type='email'] {
+    padding: 10px;
+    border: 2px solid #314de4;
+    outline: none;
+    border-radius: 5px;
+    font-size: 24px;
+    color: #314de4;
+  }
+  
+  .text {
+    font-size: 60px;
+    color: #314de4;
+    
+  }
 
 </style>
