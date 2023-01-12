@@ -12,7 +12,7 @@ export const usePokemonsList = defineStore({
     }),
     actions: {
         async fetchPokemons () {
-            for (let index = 0; index < 21; index++) {                
+            for (let index = 0; index < 51; index++) {                
                 await fetch(`https://pokeapi.co/api/v2/pokemon/${index+1}`)
                 .then(res => res.json())
                 .then(data => {
