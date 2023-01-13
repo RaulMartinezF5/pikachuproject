@@ -6,7 +6,6 @@
   import SearchVue  from "./components/Search.vue";
   import PokemonVue  from "./components/Pokemon.vue";
 
-
   const pokemonsStore = usePokemonsList()
   
   onBeforeMount(() => {
@@ -14,28 +13,56 @@
   })
 
   const loading = ref(true)
-
   const getPokemons = async () => {
-    await pokemonsStore.fetchPokemons()
+    // pokemonsStore.pokemonToSearch = ref(pokemonToSearch)
+    await pokemonsStore.fetchPokemons() 
     loading.value = false
   }
 
 </script>
 
 <template>
-  <main>
-    <HeaderVue></HeaderVue>
+  <HeaderVue></HeaderVue>
   <NavVue></NavVue>
-  <SearchVue></SearchVue>
-    <h2>POKEDEX</h2>
-    <section v-for="pokemon in pokemonsStore.pokemonsList">
+  
+  <form class="pokemon-form" v-on:submit={handleSubmit}>
+    <input
+      class="pokemon-input"
+      type="text"
+      name="pokemon"
+      v-model="pokemonName"
+      placeholder="Search your pokemon"
+      autocomplete="off"/>
+    <input
+      type="submit"
+      class="pokemon-btn"
+      value=""
+    />
+  </form>
+
+  <main>
+    <section>
       <ul>
-        <PokemonVue 
-        :pokemon="pokemon"/>
+        <PokemonVue v-for="pokemon in pokemonsStore.pokemonsList"
+        :pokemon="pokemon"></PokemonVue> 
       </ul>
     </section>
   </main>
 </template>
-<style scoped>
 
+<style scoped>
+h2 {
+  font-size: 5.3vw;
+}
+
+section {
+  padding: 3vw;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2vw;
+  list-style: none;
+}
 </style>
