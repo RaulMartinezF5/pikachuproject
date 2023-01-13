@@ -3,7 +3,6 @@
   import { onBeforeMount, ref } from "vue";
   import HeaderVue  from "@/components/Header.vue";
   import NavVue  from "./components/Nav.vue";
-  import SearchVue  from "./components/Search.vue";
   import PokemonVue  from "./components/Pokemon.vue";
 
   const pokemonsStore = usePokemonsList()
