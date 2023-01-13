@@ -5,6 +5,8 @@ console.log("Button");
 </script>
 
 <template>
+  <!-- hola -->
+  
     <ul>
         
         <li> <button ><img src="../assets/img/imgLogosPokemon/bug.png"  alt="buttonpng" border="0" value="bug"/></button></li>
