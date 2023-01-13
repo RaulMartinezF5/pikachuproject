@@ -13,9 +13,9 @@
   })
 
   const loading = ref(true)
-
   const getPokemons = async () => {
-    await pokemonsStore.fetchPokemons()
+    // pokemonsStore.pokemonToSearch = ref(pokemonToSearch)
+    await pokemonsStore.fetchPokemons() 
     loading.value = false
   }
 
@@ -24,7 +24,22 @@
 <template>
   <HeaderVue></HeaderVue>
   <NavVue></NavVue>
-  <SearchVue></SearchVue>
+  
+  <form class="pokemon-form" v-on:submit={handleSubmit}>
+    <input
+      class="pokemon-input"
+      type="text"
+      name="pokemon"
+      v-model="pokemonName"
+      placeholder="Search your pokemon"
+      autocomplete="off"/>
+    <input
+      type="submit"
+      class="pokemon-btn"
+      value=""
+    />
+  </form>
+
   <main>
     <section>
       <ul>
