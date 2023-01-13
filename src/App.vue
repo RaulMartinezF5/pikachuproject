@@ -65,4 +65,13 @@ ul {
   gap: 2vw;
   list-style: none;
 }
+/* style */
+input[type=text] {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid red;
+  border-radius: 4px;
+}
 </style>
