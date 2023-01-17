@@ -4,7 +4,7 @@
 
 <template>
     <header>
-        <img src="src\assets\img\imgLogosPokemon\pokemon.png" alt="pokemonLogo">
+        <img src="@\assets\img\imgLogosPokemon\pokemon.png" alt="pokemonLogo">
     </header>
 </template>
 
