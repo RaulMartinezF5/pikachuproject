@@ -1,9 +1,8 @@
 <script setup>
   import { usePokemonsList } from "./stores/pokemonsList";
   import { onBeforeMount, ref } from "vue";
-  import HeaderVue  from "@/components/Header.vue";
+  import HeaderVue  from "./components/Header.vue";
   import NavVue  from "./components/Nav.vue";
-  import SearchVue  from "./components/Search.vue";
   import PokemonVue  from "./components/Pokemon.vue";
 
   const pokemonsStore = usePokemonsList()
@@ -14,32 +13,15 @@
 
   const loading = ref(true)
   const getPokemons = async () => {
-    // pokemonsStore.pokemonToSearch = ref(pokemonToSearch)
+  
     await pokemonsStore.fetchPokemons() 
     loading.value = false
   }
-
-</script>
+</script> 
 
 <template>
   <HeaderVue></HeaderVue>
-  <NavVue></NavVue>
-  
-  <form class="pokemon-form" v-on:submit={handleSubmit}>
-    <input
-      class="pokemon-input"
-      type="text"
-      name="pokemon"
-      v-model="pokemonName"
-      placeholder="Search your pokemon"
-      autocomplete="off"/>
-    <input
-      type="submit"
-      class="pokemon-btn"
-      value=""
-    />
-  </form>
-
+  <NavVue></NavVue> 
   <main>
     <section>
       <ul>

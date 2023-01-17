@@ -10,16 +10,15 @@ let pokemon = new Object();
 export const usePokemonsList = defineStore({
     id: 'pokemons',
     state: () => ({
-        pokemonsList: [],
-        pokemonToSearch:""
+        pokemonsList: []
     }),
     actions: {
         async fetchPokemons () {
+            
             for (let index = 0; index < 101; index++) {                
                 await fetch(`https://pokeapi.co/api/v2/pokemon/${index+1}`)
                 .then(res => res.json())
                 .then(data => {
-                     
                     if(data.name.includes("") && data.types[0].type.name!="fire"){
                     pokemon.name = data.name.toUpperCase()
                     pokemon.id = data.id
